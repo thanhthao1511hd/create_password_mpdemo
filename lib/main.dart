@@ -1,6 +1,8 @@
 import 'package:create_password_mpdemo/create_new_password.dart';
 import 'package:flutter/material.dart';
 
+import 'list_challenge/list_challenge_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home:CreateNewPassword(),
+      home:ListChallengeScreen(),
     );
   }
 }
