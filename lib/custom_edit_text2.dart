@@ -28,6 +28,7 @@ class _CustomEditTextState2 extends State<CustomEditText2> {
         this.textController,
         this.textInit = ""});
   bool _showPassword = true;
+
   @override
   Widget build(BuildContext context) {
 
@@ -38,12 +39,14 @@ class _CustomEditTextState2 extends State<CustomEditText2> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children:<Widget> [
               TextField(
-                //controller: textController,
+                // controller: textController,
+
                 autofocus: false,
                 style: const TextStyle(fontFamily: "Roboto-Regular", fontSize: 16),
                 keyboardType: inputType ?? TextInputType.text,
                 onChanged: onTextChange,
                 decoration: InputDecoration(
+
                     labelText: hint,
                     fillColor: Colors.black12,
                     filled: true,
@@ -54,8 +57,7 @@ class _CustomEditTextState2 extends State<CustomEditText2> {
                     ),
 
                     suffixIcon: IconButton(
-                      icon: Icon(_showPassword
-                          ? Icons.visibility_off : Icons.remove_red_eye),
+                      icon: _showPassword ? SvgPicture.asset("assets/icons/ic_eye_closed.svg") : SvgPicture.asset("assets/icons/ic_eye.svg"),
                       onPressed: () {
                         setState((){
                           _showPassword=!_showPassword;
